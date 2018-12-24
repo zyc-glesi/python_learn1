@@ -25,7 +25,7 @@ class MyBallClass(pygame.sprite.Sprite):
 def animate(group):
     screen.fill([255,255,255])
     for ball in group:
-        ball.move()   #先移动所有球,然后再完成碰撞检测
+        ball.move()   #先移动所有球,然后再完成碰撞检测，有效减少不规则震动
     for ball in group:
         group.remove(ball) #删除精灵
         if pygame.sprite.spritecollide(ball,group,False):#监测精灵 与 组之间的碰撞
